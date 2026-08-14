@@ -2,6 +2,7 @@ let musicPlaying = false
 
 window.addEventListener('load', () => {
     launchConfetti()
+     launchCardAnimation() // 
 
     // Autoplay music (works since user clicked Yes to get here)
     const music = document.getElementById('bg-music')
