@@ -19,23 +19,8 @@ let noClickCount = 0
 let runawayEnabled = false
 
 function handleYesClick() {
-  if (!runawayEnabled) {
-    const msg = yesTeasePokes[Math.min(yesTeasedCount, yesTeasePokes.length - 1)]
-    yesTeasedCount++
-    showTeaseMessage(msg)
-    return
-  }
-
-  const result = document.getElementById('result')
-  result.style.display = 'block'
-  result.classList.add('reveal')
-
-  launchConfetti()
-  launchCardAnimation()
-
-  setTimeout(() => {
-    window.location.href = 'yes.html'
-  }, 4000)
+  // Redirect immediately to yes.html
+  window.location.href = 'yes.html'
 }
 
 function showTeaseMessage(msg) {
@@ -89,4 +74,4 @@ function runAway() {
   noBtn.style.left = `${randomX}px`
   noBtn.style.top = `${randomY}px`
   noBtn.style.zIndex = '50'
-} // ✅ final closing brace
+}
