@@ -80,7 +80,7 @@ function runAway() {
   const btnW = noBtn.offsetWidth
   const btnH = noBtn.offsetHeight
   const maxX = window.innerWidth - btnW - margin
-  const maxY = window.innerHeight - btnH - margin
+  const maxY = window.innerHeight - btnH - margin}
 
  const randomX = Math.random() * maxX + margin / 2; // ✅ has a value
 
