@@ -2,6 +2,7 @@ let musicPlaying = false
 
 window.addEventListener('load', () => {
     launchConfetti()
+    launchCardAnimation()
 
     // Autoplay music (works since user clicked Yes to get here)
     const music = document.getElementById('bg-music')
@@ -12,7 +13,7 @@ window.addEventListener('load', () => {
 })
 
 function launchConfetti() {
-    const colors = ['#ff69b4', '#ff1493', '#ff85a2', '#ffb3c1', '#ff0000', '#ff6347', '#fff', '#ffdf00']
+    const colors = ['#ff0000', '#000', '#fff', '#b22222']
     const duration = 6000
     const end = Date.now() + duration
 
@@ -47,6 +48,28 @@ function launchConfetti() {
             colors
         })
     }, 300)
+}
+
+function launchCardAnimation() {
+    const container = document.querySelector('.container')
+    const suits = ['♥️','♠️','♦️','♣️']
+    const values = ['A','K','Q','J','10']
+
+    for (let i = 0; i < 6; i++) {
+        const card = document.createElement('div')
+        card.className = 'poker-card'
+        card.textContent = values[i % values.length] + suits[i % suits.length]
+        container.appendChild(card)
+
+        setTimeout(() => {
+            card.style.transform = `rotate(${i * 15 - 45}deg) translateY(-80px)`
+            card.style.opacity = '1'
+        }, 100 * i)
+
+        setTimeout(() => {
+            card.remove()
+        }, 4000)
+    }
 }
 
 function toggleMusic() {
