@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Won't you come and spend a little time...With me at my MD? 💕</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poker Night Proposal 💕</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="hearts-bg"></div>
+  <div class="container">
+    <h1>Will you be my MD date? 🃏♥️♠️</h1>
 
-    <div class="container">
-        <h1> Won't you come and spend a little time...With me at my MD?  💕</h1>
-
-        <div class="gif-container">
-            <img id="cat-gif" src="https://media.tenor.com/EBV7OT7ACfwAAAAj/u-u-qua-qua-u-quaa.gif" alt="cute character">
-        </div>
-
-        <div class="buttons">
-            <button id="yes-btn" onclick="handleYesClick()">Yes</button>
-            <button id="no-btn" onclick="handleNoClick()">No</button>
-        </div>
-        <div id="tease-toast"></div>
+    <div class="gif-container">
+      <img id="cat-gif" src="images/poker-cards.gif" alt="poker cards">
     </div>
 
-    <audio id="bg-music" loop autoplay muted>
-        <source src="music/beabadoobee - Glue Song (Lyrics).mp3" type="audio/mpeg">
-    </audio>
+    <div class="buttons">
+      <button id="yes-btn" onclick="handleYesClick()">Yes</button>
+      <button id="no-btn" onclick="handleNoClick()">No</button>
+    </div>
+    <div id="tease-toast"></div>
 
-    <button id="music-toggle" onclick="toggleMusic()" title="Toggle music">🔊</button>
+    <section id="result" style="display:none;">
+      <h2>💖 You said YES! 💖</h2>
+      <p>My love, thank you for making me the happiest person today.</p>
+    </section>
+  </div>
 
-    <script src="script.js"></script>
+  <audio id="bg-music" loop autoplay muted>
+    <source src="music/Cinderella - Mac Miller.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="music-toggle" onclick="toggleMusic()" title="Toggle music">🔊</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
