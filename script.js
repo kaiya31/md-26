@@ -40,3 +40,14 @@ function launchCardAnimation() {
     }, 4000)
   }
 }
+
+function toggleMusic() {
+  const music = document.getElementById('bg-music')
+  if (music.paused) {
+    music.play()
+    document.getElementById('music-toggle').textContent = '🔊'
+  } else {
+    music.pause()
+    document.getElementById('music-toggle').textContent = '🔇'
+  }
+}
