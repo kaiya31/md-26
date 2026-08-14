@@ -24,3 +24,28 @@ function launchConfetti() {
         origin: { y: 0.6 }
     })
 }
+
+function launchCardAnimation() {
+    const container = document.querySelector('.container')
+    const suits = ['♥️','♠️','♦️','♣️']
+    const values = ['A','K','Q','J','10']
+
+    for (let i = 0; i < 6; i++) {
+        const card = document.createElement('div')
+        card.className = 'poker-card'
+        card.textContent = values[i % values.length] + suits[i % suits.length]
+        container.appendChild(card)
+
+        // Animate fan-out
+        setTimeout(() => {
+            card.style.transform = `rotate(${i * 15 - 45}deg) translateY(-80px)`
+            card.style.opacity = '1'
+        }, 100 * i)
+
+        // Remove after 4s
+        setTimeout(() => {
+            card.remove()
+        }, 4000)
+    }
+}
+
