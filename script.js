@@ -1,4 +1,4 @@
-=function handleYesClick() {
+function handleYesClick() {
     if (!runawayEnabled) {
         const msg = yesTeasePokes[Math.min(yesTeasedCount, yesTeasePokes.length - 1)]
         yesTeasedCount++
