@@ -80,7 +80,14 @@ function runAway() {
   const btnW = noBtn.offsetWidth
   const btnH = noBtn.offsetHeight
   const maxX = window.innerWidth - btnW - margin
-  const maxY = window.innerHeight - btnH - margin}
+  const maxY = window.innerHeight - btnH - margin
 
- const randomX = Math.random() * maxX + margin / 2; // ✅ has a value
+  const randomX = Math.random() * maxX + margin / 2
+  const randomY = Math.random() * maxY + margin / 2
+
+  noBtn.style.position = 'fixed'
+  noBtn.style.left = `${randomX}px`
+  noBtn.style.top = `${randomY}px`
+  noBtn.style.zIndex = '50'
+} // ✅ closing brace here
 
