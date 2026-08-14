@@ -13,7 +13,7 @@
     <p class="yes-message">I love you – won’t you come and spend a little time with me at my MD?</p>
 
     <div class="gif-container">
-      <img id="cat-gif" src="images/poker-cards.gif" alt="poker cards">
+      <img id="cat-gif" src="https://media.tenor.com/4nZz5zvZzEwAAAAC/poker-cards.gif" alt="poker cards">
     </div>
   </div>
 
@@ -23,35 +23,3 @@
 
   <button id="music-toggle" onclick="toggleMusic()" title="Toggle music">🔊</button>
 
-  <script src="yes-script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <script>
-    // Poker card animation on page load
-    function launchCardAnimation() {
-      const container = document.querySelector('.container')
-      const suits = ['♥️','♠️','♦️','♣️']
-      const values = ['A','K','Q','J','10']
-
-      for (let i = 0; i < 6; i++) {
-        const card = document.createElement('div')
-        card.className = 'poker-card'
-        card.textContent = values[i % values.length] + suits[i % suits.length]
-        container.appendChild(card)
-
-        setTimeout(() => {
-          card.style.transform = `rotate(${i * 15 - 45}deg) translateY(-80px)`
-          card.style.opacity = '1'
-        }, 100 * i)
-
-        setTimeout(() => {
-          card.remove()
-        }, 4000)
-      }
-    }
-
-    window.addEventListener('load', () => {
-      launchCardAnimation()
-    })
-  </script>
-</body>
-</html>
