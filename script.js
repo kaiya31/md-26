@@ -59,4 +59,27 @@ function handleNoClick() {
 
   if (noClickCount >= 2) {
     const noSize = parseFloat(window.getComputedStyle(noBtn).fontSize)
-    noBtn.style.fontSize = `${Math.max(noSize *
+    noBtn.style.fontSize = `${Math.max(noSize * 0.85, 10)}px`
+  }
+
+  if (noClickCount >= 5 && !runawayEnabled) {
+    enableRunaway()
+    runawayEnabled = true
+  }
+}
+
+function enableRunaway() {
+  const noBtn = document.getElementById('no-btn')
+  noBtn.addEventListener('mouseover', runAway)
+  noBtn.addEventListener('touchstart', runAway, { passive: true })
+}
+
+function runAway() {
+  const noBtn = document.getElementById('no-btn')
+  const margin = 20
+  const btnW = noBtn.offsetWidth
+  const btnH = noBtn.offsetHeight
+  const maxX = window.innerWidth - btnW - margin
+  const maxY = window.innerHeight - btnH - margin
+
+  const randomX
