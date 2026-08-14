@@ -59,7 +59,8 @@ function launchCardAnimation() {
     container.appendChild(card)
 
     setTimeout(() => {
-      card.style.transform = `rotate(${i * 15 - 45}deg) translateY(-160px)`
+      // Fan cards higher so they don’t overlap buttons/text
+      card.style.transform = `rotate(${i * 15 - 45}deg) translateY(-180px)`
       card.style.opacity = '1'
     }, 120 * i)
 
