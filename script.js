@@ -82,4 +82,5 @@ function runAway() {
   const maxX = window.innerWidth - btnW - margin
   const maxY = window.innerHeight - btnH - margin
 
-  const randomX
+ const randomX = Math.random() * maxX + margin / 2; // ✅ has a value
+
