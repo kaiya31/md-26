@@ -89,5 +89,4 @@ function runAway() {
   noBtn.style.left = `${randomX}px`
   noBtn.style.top = `${randomY}px`
   noBtn.style.zIndex = '50'
-} // ✅ closing brace here
-
+} // ✅ final closing brace
