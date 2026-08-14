@@ -3,39 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Poker Night Proposal ♥️♠️</title>
+  <title>Playful Yes/No</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Will you be my MD date? ♥️♠️</h1>
-
-    <div class="gif-container">
- <img src="https://media.tenor.com/4nZz5zvZzEwAAAAC/poker-cards.gif" alt="poker cards">
-
-</div>
-
-
+    <h1>Will you be my Valentine? 💖</h1>
     <div class="buttons">
       <button id="yes-btn" onclick="handleYesClick()">Yes</button>
       <button id="no-btn" onclick="handleNoClick()">No</button>
     </div>
+    <div id="result" class="hidden">Yay! 🎉</div>
     <div id="tease-toast"></div>
-
-    <section id="result" style="display:none;">
-      <h2>♥️ You said YES! ♠️</h2>
-      <p>I love you – won’t you come and spend a little time with me at my MD?</p>
-    </section>
+    <div class="gif-container">
+      <img src="https://media.tenor.com/4nZz5zvZzEwAAAAC/poker-cards.gif" alt="poker cards">
+    </div>
   </div>
-
-  <audio id="bg-music" loop autoplay muted>
-    <source src="music/Cinderella.mp3" type="audio/mpeg">
-  </audio>
-
-  <button id="music-toggle" onclick="toggleMusic()" title="Toggle music">🔊</button>
-
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
