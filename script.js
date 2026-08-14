@@ -11,11 +11,13 @@ function handleYesClick() {
     result.classList.add('reveal')
 
     launchConfetti()
+    launchCardAnimation()
 
     setTimeout(() => {
         window.location.href = 'yes.html'
     }, 4000)
 }
+
 
 function launchConfetti() {
     confetti({
